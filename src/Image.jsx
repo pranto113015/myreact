@@ -7,7 +7,7 @@ const Image = () => {
       <img
         src="https://avatars.githubusercontent.com/u/50362018?v=4"
         alt="Pranto Kumar"
-        class="photo"
+        className="photo"
       />
       <ul>
         <li>Invent new traffic lights</li>
