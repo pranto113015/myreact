@@ -1,14 +1,25 @@
-import Image from "./Image"
+import WorkSample from "./workSample";
 
-
-function App() {
-
-
+export default function App() {
   return (
     <div>
-     <Image />
-    </div>
-  )
-}
+      <WorkSample
+        year={"2016-2017"}
+        experience={"B.Sc Engr. CSE"}
+        institute={"IUBAT University"}
+      />
 
-export default App
+      <WorkSample
+        year={"2015-2017"}
+        experience={"B.Sc Engr. CE"}
+        institute={"IUT University"}
+      />
+
+      <WorkSample
+        year={"2016-2018"}
+        experience={"B.Sc Engr. ME"}
+        institute={"NSU University"}
+      />
+    </div>
+  );
+}
