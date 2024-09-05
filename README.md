@@ -45,3 +45,46 @@ npm run dev
 
 
 **Step-9 :**  Then will provide the local port address link copy the link and past the browser to see the project. `Done`
+
+
+---
+
+
+## Using react project Install Tailwind CSS with Vite setup process
+
+#### First create the react project file like `up instruction` then follow the bellow step :
+
+**Step-1 :**  Write the command in vs code terminal
+```sh
+npm install -D tailwindcss postcss autoprefixer
+```
+
+**Step-2 :**  Write the command in vs code terminal
+```sh
+npx tailwindcss init -p
+```
+
+**Step-3 :** Open the `tailwind.config.js` file and paste the below code
+
+```js
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+**Step-4 :** Go to the `src` folder open the `index.css` and paste the below code
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+Now it is well. `Done`

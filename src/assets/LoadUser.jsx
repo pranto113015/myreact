@@ -6,7 +6,7 @@ const LoadUser = () => {
       .then((res) => res.json())
       .then((data) => console.log(data));
   }, [1]);
-  return <div>LoadUser</div>;
+  return <div className="text-rose-500 text-4xl">LoadUser</div>;
 };
 
 export default LoadUser;
