@@ -88,3 +88,27 @@ export default {
 @tailwind utilities;
 ```
 Now it is well. `Done`
+
+
+---
+
+
+## Using component library for Tailwind CSS (daisyUI) in react vite project setup guide
+
+#### First follow the `up instruction` then follow the bellow step :
+
+**Step-1 :**  Write the command in vs code terminal
+```sh
+npm i -D daisyui@latest
+```
+
+**Step-2 :** Now add daisyUI to `tailwind.config.js` :
+```sh
+module.exports = {
+  //...
+  plugins: [
+    require('daisyui'),
+  ],
+}
+```
+Now it is fair. `Done`
