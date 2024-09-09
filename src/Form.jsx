@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Form = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+    gender: "",
+  });
+
+  const handelChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
   const submitForm = (e) => {
     e.preventDefault();
-    console.log("Form Submitted");
+    console.log("Form Submitted", formData);
   };
   return (
     <div className="max-w-md mx-auto mt-10">
@@ -16,6 +28,7 @@ const Form = () => {
             Name
           </label>
           <input
+            onChange={handelChange}
             type="text"
             id="name"
             name="name"
@@ -31,6 +44,7 @@ const Form = () => {
             Email
           </label>
           <input
+            onChange={handelChange}
             type="email"
             id="email"
             name="email"
@@ -46,6 +60,7 @@ const Form = () => {
             Password
           </label>
           <input
+            onChange={handelChange}
             type="password"
             id="password"
             name="password"
@@ -61,6 +76,7 @@ const Form = () => {
             Gender
           </label>
           <select
+            onChange={handelChange}
             id="gender"
             name="gender"
             className="mt-1 p-2 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
