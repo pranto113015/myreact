@@ -1,9 +1,10 @@
-import Form from "./Form";
+import Button from 'react-bootstrap/Button';
+
 
 export default function App() {
   return (
     <>
-      <Form />
+<Button variant='success' >Download Now</Button>
     </>
   );
 }
