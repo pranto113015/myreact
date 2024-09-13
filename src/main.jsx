@@ -5,6 +5,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import ErrorPage from "./ErrorPage";
 import Layout from "./Layout/Layout";
 import 'bootstrap/dist/css/bootstrap.css';
+import User from "./User";
+
 
 const router = createBrowserRouter([
   {
@@ -32,6 +34,11 @@ const router = createBrowserRouter([
         path: "/login",
         element: <div>This is Login Page</div>,
       },
+      {
+        path: "/user/:id",
+        element: <User/>,
+      },
+
     ],
   },
 ]);

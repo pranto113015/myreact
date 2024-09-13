@@ -38,6 +38,13 @@ export default function Navbar() {
       >
         Login
       </NavLink>
+      |
+      <NavLink
+        to="/user/1"
+        className={({ isActive }) => (isActive ? "text-danger" : "text-dark")}
+      >
+        User
+      </NavLink>
     </div>
   );
 }
