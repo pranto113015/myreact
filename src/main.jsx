@@ -4,9 +4,10 @@ import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import ErrorPage from "./ErrorPage";
 import Layout from "./Layout/Layout";
-import 'bootstrap/dist/css/bootstrap.css';
+import "bootstrap/dist/css/bootstrap.css";
 import User from "./User";
-
+import GrandParant from "./GrandParant";
+import { DataProvider } from "./DataContext";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <div>This is Home Page</div>,
+        element: <GrandParant />,
       },
       {
         path: "/about",
@@ -36,15 +37,16 @@ const router = createBrowserRouter([
       },
       {
         path: "/user/:id",
-        element: <User/>,
+        element: <User />,
       },
-
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <DataProvider>
+      <RouterProvider router={router} />
+    </DataProvider>
   </React.StrictMode>
 );
